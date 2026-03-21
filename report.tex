@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+
+\title{CSC111 Winter 2025 Project 1}
+\author{Sophia Lin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Running the game}
+We should be able to run your game by simply running \texttt{adventure.py}. If you have any other requirements (e.g., installing certain modules), describe them here. Otherwise, skip this section.
+
+\section*{Game Map}
+Example game map below (edit it to show your actual game map):
+
+\begin{verbatim}
+ 7  8  9
+ 4  5  6
+ 1  2  3
+\end{verbatim}
+
+Starting location is: 1
+
+\section*{Game solution}
+List of commands: look, inventory, score, log, quit, undo, pick, drop, go[north/south/west/east], clue, puzzle
+
+\section*{Lose condition(s)}
+Description of how to lose the game:
+\\ 1. To lose the game player must reach maximum steps, and still haven't got all the required items: usb, laptop charger and lucky mug
+\\ 2. Or if the player encounters hard level puzzle and unable to solve it
+
+List of commands: \\ "go north", "pick", "yellow star", "pick", "ticket", "go south", "drop", "ticket", "pick",
+                 "minion", "go east", "drop", "yellow star", "go east", "pick", "red star", "go west", "drop",
+                 "red star", "go north", "go east", "pick", "robot", "pick", "loonie", "go west", "drop", "robot",
+                 "pick", "blue star", "go north", "drop", "minion", "pick", "laptop charger", "go west", "drop",
+                 "loonie", "pick", "ice cap", "go east", "go east", "drop", "ice cap", "pick", "usb", "go south",
+                 "go west", "go south", "drop", "blue star", "pick", "lucky mug", "go west", "drop", "lucky mug",
+                 "drop", "laptop charger", "go north", "go south", "go east", "go east", "go west", "go north",
+                 "go east", "go west", "go north", "go west", "go east", "go east", "go south",
+                 "go west", "go south", "go west", "go north", "go south", "go east", "go east", "go west", "go north",
+                 "go east", "go west", "go north", "go west", "go east", "go east", "go south",
+                 "go west", "go south", "go west", "go north", "go south"\\
+
+Which parts of your code are involved in this functionality:
+In adventure.py: \\ functions: puzzle$_$ \\ result, \\ wordle, \\ win$_$ lose
+
+\section*{Inventory}
+
+\begin{enumerate}
+\item All location IDs that involve items in the game: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+\item Item data:
+\begin{enumerate}
+    \item For Item 1:
+    \begin{itemize}
+    \item Item name: minion
+    \item Item start location ID: 1
+    \item Item target location ID: 8
+    \end{itemize}
+        \item For Item 2:
+    \begin{itemize}
+    \item Item name: lucky mug
+    \item Item start location ID: 2
+    \item Item target location ID: 1
+    \end{itemize}
+        \item For Item 3:
+    \begin{itemize}
+    \item Item name: yellow star
+    \item Item start location ID: 4
+    \item Item target location ID: 2
+    \end{itemize}
+        \item For Item 4:
+    \begin{itemize}
+    \item Item name: red star
+    \item Item start location ID: 3
+    \item Item target location ID: 2
+    \end{itemize}
+        \item For Item 5:
+    \begin{itemize}
+    \item Item name: blue star
+    \item Item start location ID: 3
+    \item Item target location ID: 2
+    \end{itemize}
+        \item For Item 6:
+    \begin{itemize}
+    \item Item name: robot
+    \item Item start location ID: 6
+    \item Item target location ID: 5
+    \end{itemize}
+        \item For Item 7:
+    \begin{itemize}
+    \item Item name: ticket
+    \item Item start location ID: 4
+    \item Item target location ID: 1
+    \end{itemize}
+        \item For Item 8:
+    \begin{itemize}
+    \item Item name: laptop charger
+    \item Item start location ID: 8
+    \item Item target location ID: 1
+    \end{itemize}
+        \item For Item 9:
+    \begin{itemize}
+    \item Item name: loonie
+    \item Item start location ID: 6
+    \item Item target location ID: 7
+    \end{itemize}
+        \item For Item 10:
+    \begin{itemize}
+    \item Item name: ice cap
+    \item Item start location ID: 7
+    \item Item target location ID: 9
+    \end{itemize}
+        \item For Item 11:
+    \begin{itemize}
+    \item Item name: usb
+    \item Item start location ID: 9
+    \item Item target location ID: 1
+    \end{itemize}
+\end{enumerate}
+
+    \item Exact command(s) that should be used to pick up an item (choose any one item for this example), and the command(s) used to use/drop the item (can copy the list you assigned to \texttt{inventory\_demo} in the \texttt{project1\_simulation.py} file)
+    \\ Pick: "go north", "pick", "yellow star"
+    \\ Drop: "go north", "pick", "yellow star", "go south", "drop", "ticket"
+    \item Which parts of your code (file, class, function/method) are involved in handling the \texttt{inventory} command:
+    \\ In adventure.py:
+    \\ function drop and pick
+    \\ some part of function undo
+    \\ Some part of game.ongoing (section inventory in the elif)
+\end{enumerate}
+
+\section*{Score}
+\begin{enumerate}
+
+    \item Briefly describe the way players can earn scores in your game. Include the first location in which they can increase their score, and the exact list of command(s) leading up to the score increase:
+    \\To earn scores in the game, player must deposite the item to the correct position and depends on the importance of the item, player gets different amount of scores
+
+
+    \item Copy the list you assigned to \texttt{scores\_demo} in the \texttt{project1\_simulation.py} file into this section of the report: \\ \\
+    "go north", "pick", "yellow star", "pick", "ticket", "go south", "drop", "ticket", "go east", "drop", "yellow star", "score"
+
+
+    \item Which parts of your code (file, class, function/method) are involved in handling the \texttt{score} functionality:
+    \\ In adventure.py:
+    \\ Function drop
+    \\ some part of undo function (section score in the elif)
+\end{enumerate}
+
+\section*{Enhancements}
+\begin{enumerate}
+    \item Describe your enhancement \#1 here
+    \begin{itemize}
+        \item Brief description of what the enhancement is (if it's a puzzle, also describe what steps the player must take to solve it):
+        \\ The enhancement is a multi-type puzzle.
+         Where the players will encounter it randomly during the game.
+        When encountered, if player decides to play the puzzle, base on how many steps user have taken, they will get either, easy, a math calculation, medium, guess a ridle, or hard level puzzle, wordle. Easy, and medium puzzle will earn extra steps for the player. While the hard puzzle gives user a chance to win the game automatically. Easy puzzle will only have 1 chance, medium level 3 chances, and hard level 6 chances, with clues at each location. Before enter the game player have the chance to quit, else player can only exist when the puzzle ends.
+        \item Complexity level (choose from low/medium/high): medium
+        \item Reasons you believe this is the complexity level (e.g., mention implementation details, how much code did you have to add/change from the baseline, what challenges did you face, etc.)
+
+          This enhancement is medium complexity because, although it has multiple components, each part is manageable to implement. To achieve this, I added several new functions to the AdventureGame class. The main puzzle function determines which puzzle the player encounters, and it calls three sub-functions corresponding to the different puzzle types: math puzzle, riddle, and Wordle. I used Python's random module to ensure the puzzle solutions change every time the game is played, adding replayability. One of the main challenges was implementing the Wordle puzzle. Initially, I planned to select a random word at the start of the game, but I found that generating clues efficiently while reading from a file in the middle of the game was difficult and affected performance. To address this, I preloaded the necessary data at the start of the game and adjusted the logic to generate clues on the fly, which ensured a smoother gameplay experience and improved the puzzle’s responsiveness. Lastly, there are many different results for the puzzles. It's a bit challenging to keep track all possible results.   \end{itemize}
+
+
+    \end{enumerate}
+
+
+
+\end{document}

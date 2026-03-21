@@ -1,0 +1,290 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Woodsworth College Residence",
+      "brief_description": "You are on the fourth floor of Woodsworth Residence. A ticket might be the key to winning the Minion Prize.",
+      "long_description": "You are on the fourth floor of Woodsworth Residence, where the Minion Prize Competition is underway. The floor is Minion-themed, and students are hunting for prize tickets. If you have a **ticket**, you can win a Minion here. Maybe it’s hidden somewhere on campus...",
+      "available_commands": {
+        "go north": 4,
+        "go east": 2
+      },
+      "items": ["minion"],
+      "clue": {
+        "tree" : "It’s found in nature.",
+        "gold" : "It’s a material.",
+        "jump" : "It’s an action.",
+        "fire" : "It gives off heat.",
+        "moon" : "It’s found in space.",
+        "wind" : "You can’t see it.",
+        "rain" : "It comes from the sky.",
+        "clock" : "It’s a common object."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Carr Hall",
+      "brief_description": "You are on the roof of Carr Hall. The lucky mug is within reach—if you have enough stars.",
+      "long_description": "Carr Hall’s roof offers a beautiful view, but your attention is drawn to a **lucky mug** resting on a table. It seems important, but it looks like you’ll need a **yellow star, blue star, and red star** to claim it. Time to go star hunting!",
+      "available_commands": {
+        "go north": 5,
+        "go east": 3,
+        "go west": 1
+      },
+      "items": ["lucky mug"],
+      "clue": {
+        "tree" : "It provides oxygen.",
+        "gold" : "It’s valuable.",
+        "jump" : "It requires movement.",
+        "fire" : "It can be dangerous.",
+        "moon" : "It doesn’t make its own light.",
+        "wind" : "You can feel it.",
+        "rain" : "It’s part of the water cycle.",
+        "clock" : "It has numbers."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Victoria Colleges",
+      "brief_description": "You are in Victoria Colleges. Could there be a red star nearby?",
+      "long_description": "The ivy-covered walls of Victoria Colleges are peaceful and academic. As you walk around, a faint glimmer catches your eye—a **red star** near a garden bench. Keep your eyes open; there might be more stars elsewhere.",
+      "available_commands": {
+        "go north": 6,
+        "go west": 2
+      },
+      "items": ["red star"],
+      "clue": {
+        "tree" : "Many animals live in it.",
+        "gold" : "It’s used in jewelry.",
+        "jump" : "You use your legs to do it.",
+        "fire" : "It needs fuel to keep going.",
+        "moon" : "It looks different each night.",
+        "wind" : "It moves things.",
+        "rain" : "It’s made of water.",
+        "clock" : "It helps people."
+      }
+    },
+    {
+      "id": 4,
+      "name": "Health Science",
+      "brief_description": "You are in the Health Science Building. Something shiny and valuable lies here.",
+      "long_description": "The Health Science Building is bustling with students. Near a bulletin board, you spot a **yellow star** glowing softly. Not far away, there’s a **ticket** sitting on a bench. This ticket might just lead you back to Woodsworth for the Minion Prize.",
+      "available_commands": {
+        "go north": 7,
+        "go east": 5,
+        "go south": 1
+      },
+      "items": ["yellow star", "ticket"],
+      "clue": {
+        "tree" : "It has branches.",
+        "gold" : "It’s often found underground.",
+        "jump" : "Athletes do it a lot.",
+        "fire" : "It can be created with a spark.",
+        "moon" : "It affects ocean tides.",
+        "wind" : "It makes leaves rustle.",
+        "rain" : "It can be light or heavy.",
+        "clock" : "It can be big or small."
+      }
+    },
+    {
+      "id": 5,
+      "name": "Bahen",
+      "brief_description": "You are in Bahen Centre. A blue star and a robot await discovery.",
+      "long_description": "Bahen Centre is a hub of innovation and creativity. Among the desks, you find a **blue star** near a workstation. A small **robot** stands nearby—it might be important for claiming that star.",
+      "available_commands": {
+        "go north": 8,
+        "go east": 6,
+        "go west": 4,
+        "go south": 2
+      },
+      "items": ["blue star"],
+      "clue": {
+        "tree" : "It can be tall or short.",
+        "gold" : "People mine for it.",
+        "jump" : "It helps you go over obstacles.",
+        "fire" : "It can be orange, red, or blue.",
+        "moon" : "It’s round.",
+        "wind" : "It can be strong or gentle.",
+        "rain" : "It makes the ground wet.",
+        "clock" : "It usually hangs on a wall or sits on a desk."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Myhal Center",
+      "brief_description": "You are in Myhal Center. A loonie and a robot might help you on your journey.",
+      "long_description": "Myhal Center is sleek and modern, with plenty of study spaces. On the floor, you spot a **loonie**—just enough for a coffee. A **robot** on a nearby table might also be useful later. Don’t forget to check Bahen Centre for that blue star!",
+      "available_commands": {
+        "go north": 9,
+        "go south": 3,
+        "go west": 5
+      },
+      "items": ["robot", "loonie"],
+      "clue": {
+        "tree" : "It grows leaves.",
+        "gold" : "It’s soft but strong",
+        "jump" : "Some animals do it to move.",
+        "fire" : "It’s used for cooking.",
+        "moon" : "It has craters.",
+        "wind" : "It’s caused by air pressure changes.",
+        "rain" : "You need an umbrella when it happens.",
+        "clock" : "It has hands that move."
+      }
+    },
+    {
+      "id": 7,
+      "name": "Tim Hortons",
+      "brief_description": "You are in Tim Hortons. Maybe a loonie can get you an ice cap.",
+      "long_description": "Tim Hortons is lively, filled with the smell of coffee and pastries. You see an **ice cap** waiting for you on the counter. If you have a **loonie**, you might just be able to claim it.",
+      "available_commands": {
+        "go south": 4,
+        "go east": 8
+      },
+      "items": ["ice cap"],
+      "clue": {
+        "tree" : "Some types bear fruit.",
+        "gold" : "It’s shiny and yellow.",
+        "jump" : "It’s often seen in sports.",
+        "fire" : "It was important in human evolution.",
+        "moon" : "Astronauts have visited it.",
+        "wind" : "It helps birds and kites fly.",
+        "rain" : "It helps plants grow.",
+        "clock" : "Some are digital."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Medical Science",
+      "brief_description": "You are in the Medical Science Building. Yaka might trade a laptop charger for minion.",
+      "long_description": "The Medical Science Building is a labyrinth of research labs. Yaka, the floor’s guardian, loves collecting minions. If you offer her enough, she might give you a **laptop charger** in return. Time to gather minions!",
+      "available_commands": {
+        "go south": 5,
+        "go east": 9,
+        "go west": 7
+      },
+      "items": ["laptop charger"],
+      "clue": {
+        "tree" : "It changes with the seasons.",
+        "gold" : "It’s used in Olympic medals.",
+        "jump" : "You can do it on a trampoline.",
+        "fire" : "Campers use it to stay warm.",
+        "moon" : "It orbits the Earth.",
+        "wind" : "Hurricanes and tornadoes are made of it.",
+        "rain" : "Storms often bring it.",
+        "clock" : "It requires battery"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Robart Library",
+      "brief_description": "You are in Robarts Library. A USB is hidden among the books.",
+      "long_description": "Robarts Library is vast and filled with knowledge. As you explore the rows of bookshelves, you find a **USB** tucked between some books. If you’ve recently claimed an **ice cap**, this USB could be useful.",
+      "available_commands": {
+        "go south": 6,
+        "go west": 8
+      },
+      "items": ["usb"],
+      "clue": {
+        "tree" : "It has a trunk.",
+        "gold" : "Its chemical symbol is Au.",
+        "jump" : "It means to push yourself into the air.",
+        "fire" : "It’s made of flames and burns.",
+        "moon" : "It’s Earth’s natural satellite.",
+        "wind" : "It’s moving air.",
+        "rain" : "It falls as drops from clouds.",
+        "clock" : "It measures hours and minutes."
+      }
+      }
+  ],
+
+  "items": [
+    {
+      "name": "minion",
+      "description": "The grand prize of the Minion Prize Competition at Woodsworth College!",
+      "start_position": 1,
+      "target_position": 8,
+      "target_points": 5,
+      "preconditions": ["ticket"]
+    },
+    {
+      "name": "lucky mug",
+      "description": "The mug you’ve been searching for! It’s safe and sound. It’s time to bring this back to Woodsworth.",
+      "start_position": 2,
+      "target_position": 1,
+      "target_points": 8,
+      "preconditions": ["yellow star", "blue star", "red star"]
+    },
+    {
+      "name": "yellow star",
+      "description": "A shiny yellow star. It looks important. Maybe collecting all the stars will lead to something special at Carr Hall.",
+      "start_position": 4,
+      "target_position": 2,
+      "target_points": 1,
+      "preconditions": []
+    },
+    {
+      "name": "red star",
+      "description": "A radiant red star. Another piece of the puzzle for finding the lucky mug. Keep looking for the other stars!",
+      "start_position": 3,
+      "target_position": 2,
+      "target_points": 1,
+      "preconditions": []
+    },
+    {
+      "name": "blue star",
+      "description": "A bright blue star. Head back to Carr Hall.",
+      "start_position": 5,
+      "target_position": 2,
+      "target_points": 1,
+      "preconditions": ["robot"]
+    },
+    {
+      "name": "robot",
+      "description": "A small, cool robot. It seems connected to the **blue star**. Take it with you—it might come in handy!",
+      "start_position": 6,
+      "target_position": 5,
+      "target_points": 2,
+      "preconditions": []
+    },
+    {
+      "name": "ticket",
+      "description": "Congrats! You found a prize ticket! Take it back to Woodsworth College to win the Minion.",
+      "start_position": 4,
+      "target_position": 1,
+      "target_points": 2,
+      "preconditions": []
+    },
+    {
+      "name": "laptop charger",
+      "description": "A lifesaving laptop charger. It’s time to bring this back to Woodsworth.",
+      "start_position": 8,
+      "target_position": 1,
+      "target_points": 8,
+      "preconditions": ["minion"]
+    },
+    {
+      "name": "loonie",
+      "description": "A shiny Canadian loonie! This might be just enough to get a free **ice cap** at Tim Hortons.",
+      "start_position": 6,
+      "target_position": 7,
+      "target_points": 2,
+      "preconditions": []
+    },
+    {
+      "name": "ice cap",
+      "description": "A refreshing ice cap! If you’ve got this, maybe you can find something useful at Robarts Library.",
+      "start_position": 7,
+      "target_position": 9,
+      "target_points": 5,
+      "preconditions": ["loonie"]
+    },
+    {
+      "name": "usb",
+      "description": "A USB drive with important data. It’s time to bring this back to Woodsworth.",
+      "start_position": 9,
+      "target_position": 1,
+      "target_points": 8,
+      "preconditions": ["ice cap"]
+    }
+  ]
+}
